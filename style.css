@@ -1,0 +1,402 @@
+*{
+    box-sizing: border-box;
+    font-family: "Fira Sans Condensed", sans-serif;
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+a{
+    color: aliceblue;
+font-size: 1.2 rem;
+text-decoration: none;
+}
+
+p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.dotted-hr{
+    border: dotted 6px white;
+border-bottom: none;
+margin:20px auto;
+width:70px;
+
+}
+
+[class*="col"]
+{
+    float: left;
+    padding: 10px;
+}
+/*for mobile*/
+[class*="col"]
+{
+    width: 100%;
+}
+
+/* navbar start here */
+.navbar{
+    background-color:#40868b;
+    padding: 1% 7%;
+    text-align: center;
+}
+
+.navbar h1{
+    color: aliceblue;
+    margin: 0%;
+    padding-top: 10px;
+}
+
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.navbar-menu a{
+    background-color: #0c6168;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 10px;
+}
+
+.navbar-menu a:hover{
+    background-color: gray;
+}
+
+.navbar::after{
+content: '';
+display: table;
+clear: both;
+}
+/* navbar ends here */
+
+/* Profile design starts from here */
+.profile{
+    padding: 130px 10px;
+    position: relative;
+    text-align: center;
+
+}
+
+.profile .top-rainbow-icon{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    width: 20%;
+    transition: transform 2s;
+}
+.profile .top-rainbow-icon:hover{
+    transform: rotate(360deg);
+}
+.profile .bottom-rainbow-icon{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    width: 20%;
+    transition: transform 2s;
+}
+.profile .bottom-rainbow-icon:hover{
+    transform: rotate(360deg);
+}
+
+.profile-desc h1{
+    font-family:"Satisfy", cursive; 
+    font-size: 3rem;
+}
+.profile-desc p{
+    color: rgb(80, 100, 255);
+    text-align: center;
+    width: 90%;
+    margin: 0 auto 20px auto;
+}
+.profile::after{
+    display: table;
+    content: '';
+    clear: both;
+}
+/* Profile design ends here */
+
+/* about me starts from here */
+
+.about-me{
+    background-color:darkgreen;
+    padding: 1% 7%;
+    color: white;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+.aboutme-image img{
+    border: 5px  solid white;
+    border-radius: 50%;
+height: 220px;
+width: 200px;
+
+}
+.about-me p{
+    font-size: 1.2rem;
+}
+
+.about-me::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+.cv-button{
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1rem;
+    margin: 10px;
+    cursor: pointer;
+}
+/* about me ends here */
+
+
+/* my-experience starts here */
+.my-experience{
+    padding: 1% 0%;
+}
+.my-experience .card{
+    background-color:darkseagreen;
+    border-radius: 10px;
+    padding: 10px;
+    transition:0.3s ;
+    
+}
+.card-icon img{
+    width: 100px;
+    margin-top: 20px;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 5px firebrick;
+}
+.card-icon{
+    text-align: center;
+
+}
+.rounded-img{
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.card-title h2{
+    background-color: #0c6168;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.my-experience::after{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+.skills-cont {
+    padding-right: 45%;
+}
+
+.skills-cont li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 26px 10px;
+    position: relative;
+    padding-right: 300px;
+
+}
+
+.skills-cont li::before{
+    content: '';
+    background-color: violet;
+    top: calc(100% + 5px);
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    border-radius: 1000px;
+}
+
+.skills-cont li::after{
+    content: '';
+    background-color: rgb(166, 72, 153);
+    top: calc(100% + 5px);
+    left: 0;
+    position: absolute;
+    width: 0%;
+    height: 10px;
+    border-radius: 1000px;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.skills-cont li.html::after{
+    animation-name: html;
+}
+@keyframes html{
+to{
+    width: 90%;
+}
+}
+.skills-cont li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+to{
+    width: 80%;
+}
+}
+.skills-cont li.bootstrap::after{
+    animation-name:bootstrap ;
+}
+@keyframes bootstrap{
+to{
+    width: 70%;
+}
+}
+.skills-cont li.js::after{
+    animation-name: js;
+}
+@keyframes js{
+to{
+    width: 80%;
+}
+}
+.skills-cont li.jquery::after{
+    animation-name:jquery ;
+}
+@keyframes jquery{
+to{
+    width: 50%;
+}
+}
+.skills-cont li.node::after{
+    animation-name: node;
+}
+@keyframes node{
+to{
+    width: 80%;
+}
+}
+.skills-cont li.express::after{
+    animation-name:express ;
+}
+@keyframes express{
+to{
+    width: 40%;
+}
+}
+.skills-cont li.git::after{
+    animation-name:git ;
+}
+@keyframes git{
+to{
+    width: 80%;
+}
+}
+.skills-cont li.react::after{
+    animation-name: react;
+}
+@keyframes react{
+to{
+    width: 65%;
+}
+}
+/* my-experience ends here */
+
+/* achi-cont starts from here */
+.achi-cont{
+    padding: 1% 9%;
+    background-color: rgb(33, 186, 186);
+    color: white;
+}
+
+.achi-cont{
+    clear: both;
+    display: table;
+    content: '';
+}
+
+.cont{
+    padding: 1% 5%;
+    text-align: center;
+}
+
+.cont input, textarea{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+}
+
+.cont button{
+    border: none;
+    border-radius: 12px;
+    background-color: darkgreen;
+    color: azure;
+    width: 70px;
+    cursor: pointer;
+    padding: 8px;
+    margin: 10px;
+}
+
+.cont-links{
+    text-align: center;
+}
+.media-buttons .btn{
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 32px;
+    padding: 5px;
+    margin: 10px;
+    width: 50px;
+}
+
+.btn:hover{
+    background-color:goldenrod;
+}
+/* achi-cont ends here */
+
+/* footer start */
+.footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.footer-menu a{
+    display: block;
+    margin: 15px 0px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.footer::after{
+    clear: both;
+    display: table;
+    content: '';  
+}
+
+.footer-menu a:hover{
+    color: darksalmon;
+}
+/* footer ends */
